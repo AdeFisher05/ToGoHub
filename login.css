@@ -1,0 +1,33 @@
+.login{
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px 20%;
+    border-radius: 20px;
+    background: var(--panel);
+}
+
+.login input, .login button {
+  width: 100%;
+  border-radius: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  background: var(--panel);
+  font: inherit;
+  margin: 10px;
+}
+
+.login button{
+  background-color: var(--brand);
+  color: var(--panel);
+}
+
+.login p{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 640px){
+    .login{
+        padding: 50px 10%;
+    }
+}
