@@ -1,4 +1,28 @@
 <?php
+
+declare(strict_types=1);
+use Phroute\Phroute\RouteCollector;
+use Phroute\Phroute\Dispatcher;
+$path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+require 'vendor/autoload.php';
+$router = new RouteCollector();
+
+$router->any('/', function(){
+
+    return "./index.php";
+});
+
+// $router->any('/Routes/signup', function(){
+//     return './Routes/signup.php';
+// });
+
+// $dispatcher = new Dispatcher($router->getData());
+
+// $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], $path);
+
+// // Print out the value returned from the dispatched function
+// echo $response;
+
 require './header.php';
 ?>
 <section class="Hero" id="hero">
@@ -189,78 +213,78 @@ require './header.php';
         >
           <div class="grid">
             <div class="thumb">
-              <img src="images/bike.jpg" alt="Bike" /><a class="view" href="./pay.php#bike"
+              <img src="images/bike.jpg" alt="Bike" /><a class="view" href="./Routes/pay.php#bike"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/tricycle.jpeg" alt="Tricycle" /><a
                 class="view"
-                href="./pay.php#tricycle"
+                href="./Routes/pay.php#tricycle"
                 >View more</a
               >
             </div>
             <div class="thumb">
-              <img src="images/car.jpeg" alt="Car" /><a class="view" href="./pay.php#car"
+              <img src="images/car.jpeg" alt="Car" /><a class="view" href="./Routes/pay.php#car"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/highlander.jpeg" alt="Highlander" /><a
                 class="view"
-                href="./pay.php#highlander"
+                href="./Routes/pay.php#highlander"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/pickup.jpg" alt="Pickup" /><a
                 class="view"
-                href="./pay.php#pickup"
+                href="./Routes/pay.php#pickup"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/haice.jpeg" alt="Haice" /><a
                 class="view"
-                href="./pay.php#bus"
+                href="./Routes/pay.php#bus"
                 >View more</a
               >
             </div>
             <div class="thumb">
-              <img src="images/truck.jpg" alt="Truck" /><a class="view" href="./pay.php#truck"
+              <img src="images/truck.jpg" alt="Truck" /><a class="view" href="./Routes/pay.php#truck"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/coaster.png" alt="Coaster" /><a
                 class="view"
-                href="./pay.php#coaster"
+                href="./Routes/pay.php#coaster"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/luxurious.jpg" alt="Luxurious" /><a
                 class="view"
-                href="./pay.php#luxurious"
+                href="./Routes/pay.php#luxurious"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/train.webp" alt="Train" /><a
                 class="view"
-                href="./pay.php#train"
+                href="./Routes/pay.php#train"
                 >View more</a
               >
             </div>
             <div class="thumb">
-              <img src="images/boat.jpeg" alt="Boat" /><a class="view" href="./pay.php#boat"
+              <img src="images/boat.jpeg" alt="Boat" /><a class="view" href="./Routes/pay.php#boat"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/tipper.jpg" alt="Tipper" /><a
                 class="view"
-                href="./pay.php#tipper"
+                href="./Routes/pay.php#tipper"
                 >View more</a
               >
             </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ToGoHub — Move Smarter</title>
-    <link rel="icon" href="./images/TGH-icon.png" type="image/png">
+    <link rel="icon" href="../images/TGH-icon.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,22 +16,22 @@
 
     <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet" href="./footer.css">
-    <link rel="stylesheet" href="./styles.css">
-    <!-- <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./login.css">
     <link rel="stylesheet" href="./signup.css">
-    <link rel="stylesheet" href="pay.css">  -->
+    <link rel="stylesheet" href="./pay.css">
   </head>
   <body>
     <header>
       <div class="container topnav" id="topnav">
         <nav>
           <div class="logo">
-            <a href="./">
-            <img src="./images/TGH-logo.png" alt="" />
+            <a href="../">
+            <img src="../images/TGH-logo.png" alt="" />
             </a>
           </div>
           <ul class="menu">
-            <li><a href="./">Home</a></li>
+            <li><a href="../">Home</a></li>
             <li><a href="">About</a></li>
             <li class="dropdown">
               <button class="dropbtn">Services ▾</button>
@@ -55,7 +55,7 @@
             </li>
             <li><a href="./Routes/signup.php">Create Account</a></li>
             <li><a href="">Transaction History</a></li>
-            <li><a href="/login">Sign In</a></li>
+            <li><a href="./Routes/login.php">Sign In</a></li>
             <li><a href="">Alert</a></li>
             <li><a href="">Notification</a></li>
               
