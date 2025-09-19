@@ -139,7 +139,7 @@ require './header.php';
             aria-controls="tab1"
             id="t1"
           >
-          <a href="./pay.php">
+          <a href="./pay">
             Pay for Ride
             </a>
           </button>
@@ -149,7 +149,7 @@ require './header.php';
             aria-selected="false"
             aria-controls="tab2"
             id="t2"
-          > <a href="./Routes/hires.php">
+          > <a href="./hires">
             Hire Ride</a>
           </button>
           <button
@@ -189,78 +189,78 @@ require './header.php';
         >
           <div class="grid">
             <div class="thumb">
-              <img src="images/bike.jpg" alt="Bike" /><a class="view" href="./Routes/pay.php#bike"
+              <img src="images/bike.jpg" alt="Bike" /><a class="view" href="./pay#bike"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/tricycle.jpeg" alt="Tricycle" /><a
                 class="view"
-                href="./Routes/pay.php#tricycle"
+                href="./pay#tricycle"
                 >View more</a
               >
             </div>
             <div class="thumb">
-              <img src="images/car.jpeg" alt="Car" /><a class="view" href="./Routes/pay.php#car"
+              <img src="images/car.jpeg" alt="Car" /><a class="view" href="./pay#car"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/highlander.jpeg" alt="Highlander" /><a
                 class="view"
-                href="./Routes/pay.php#highlander"
+                href="./pay#highlander"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/pickup.jpg" alt="Pickup" /><a
                 class="view"
-                href="./Routes/pay.php#pickup"
+                href="./pay#pickup"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/haice.jpeg" alt="Haice" /><a
                 class="view"
-                href="./Routes/pay.php#bus"
+                href="./pay#bus"
                 >View more</a
               >
             </div>
             <div class="thumb">
-              <img src="images/truck.jpg" alt="Truck" /><a class="view" href="./Routes/pay.php#truck"
+              <img src="images/truck.jpg" alt="Truck" /><a class="view" href="./pay#truck"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/coaster.png" alt="Coaster" /><a
                 class="view"
-                href="./Routes/pay.php#coaster"
+                href="./pay#coaster"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/luxurious.jpg" alt="Luxurious" /><a
                 class="view"
-                href="./Routes/pay.php#luxurious"
+                href="./pay#luxurious"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/train.webp" alt="Train" /><a
                 class="view"
-                href="./Routes/pay.php#train"
+                href="./pay#train"
                 >View more</a
               >
             </div>
             <div class="thumb">
-              <img src="images/boat.jpeg" alt="Boat" /><a class="view" href="./Routes/pay.php#boat"
+              <img src="images/boat.jpeg" alt="Boat" /><a class="view" href="./pay#boat"
                 >View more</a
               >
             </div>
             <div class="thumb">
               <img src="images/tipper.jpg" alt="Tipper" /><a
                 class="view"
-                href="./Routes/pay.php#tipper"
+                href="./pay#tipper"
                 >View more</a
               >
             </div>

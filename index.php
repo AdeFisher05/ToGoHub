@@ -20,6 +20,10 @@ $router->any('/login', function(){
     require './login.php';
 });
 
+$router->any('/pay', function(){
+    require './pay.php';
+});
+
 $router->any('/Routes/hires', function(){
      require './Routes/hires.php';
  });
@@ -30,7 +34,7 @@ $dispatcher = new Dispatcher($router->getData());
 // Get the current path
 $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-// Detect base folder dynamically (so you don’t hardcode /ToGoHub)
+// Detect base folder dynamically (so you don’t hardcode /ToGo)
 $scriptName = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME']));
 if ($scriptName !== '/' && strpos($path, $scriptName) === 0) {
     $path = substr($path, strlen($scriptName));

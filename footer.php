@@ -1,13 +1,13 @@
 <div class="container foot-wrap">
       <div class="foot">
-        <h4><a href="./pay.php">Pay for Ride</a></h4>
-        <a href="./pay.php#bike">Bike (Okada)</a>
-        <a href="./pay.php#tricycle">Tricycle</a>
-        <a href="./pay.php#car">Car</a>
-        <a href="./pay.php#bus">Bus</a>
-        <a href="./pay.php">Luxury Bus</a>
-        <a href="./pay.php#train">Train</a>
-        <a href="./pay.php#boat">Boat</a>
+        <h4><a href="./pay">Pay for Ride</a></h4>
+        <a href="./pay#bike">Bike (Okada)</a>
+        <a href="./pay#tricycle">Tricycle</a>
+        <a href="./pay#car">Car</a>
+        <a href="./pay#bus">Bus</a>
+        <a href="./pay">Luxury Bus</a>
+        <a href="./pay#train">Train</a>
+        <a href="./pay#boat">Boat</a>
       </div>
       <div class="foot">
         <h4>Hire Ride</h4>
