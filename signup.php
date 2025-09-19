@@ -92,7 +92,7 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
       </form>
     </div>
     <?php
-    require '../footer.php';
+    require './footer.php';
 
     
     // Set the hostname for MySQL (e.g., 'localhost' or an IP address)

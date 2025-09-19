@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="./header.css" />
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./styles.css">
-    <!-- <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="./login.css">
     <link rel="stylesheet" href="./signup.css">
-    <link rel="stylesheet" href="pay.css">  -->
+    <link rel="stylesheet" href="./pay.css"> 
+    <link rel="stylesheet" href="./hires.css">
   </head>
   <body>
     <header>
@@ -53,9 +54,9 @@
                 <a href="">Manage</a>
               </div>
             </li>
-            <li><a href="./Routes/signup.php">Create Account</a></li>
+            <li><a href="./signup">Create Account</a></li>
             <li><a href="">Transaction History</a></li>
-            <li><a href="/login">Sign In</a></li>
+            <li><a href="./login">Sign In</a></li>
             <li><a href="">Alert</a></li>
             <li><a href="">Notification</a></li>
               
