@@ -16,6 +16,9 @@
         tab.setAttribute('aria-selected','true');
         document.getElementById(tab.getAttribute('aria-controls')).classList.add('active');
       });
+      // tab.addEventListener('click', ()=>{
+
+      // })
     });
 
     // Stats counter

@@ -8,7 +8,6 @@ require 'vendor/autoload.php';
 $router = new RouteCollector();
 
 $router->any('/', function(){
-
     require "./home.php";
 });
 
@@ -24,8 +23,8 @@ $router->any('/pay', function(){
     require './pay.php';
 });
 
-$router->any('/Routes/hires', function(){
-     require './Routes/hires.php';
+$router->any('/hires', function(){
+     require './hires.php';
  });
 
 // Create dispatcher
