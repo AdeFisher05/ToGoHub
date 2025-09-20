@@ -139,9 +139,7 @@ require './header.php';
             aria-controls="tab1"
             id="t1"
           >
-          <a href="./pay">
             Pay for Ride
-            </a>
           </button>
           <button
             class="tab-btn"
@@ -149,8 +147,8 @@ require './header.php';
             aria-selected="false"
             aria-controls="tab2"
             id="t2"
-          > <a href="./hires">
-            Hire Ride</a>
+          > 
+            Hire Ride
           </button>
           <button
             class="tab-btn"

@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./login.css">
     <link rel="stylesheet" href="./signup.css">
     <link rel="stylesheet" href="./pay.css"> 
-    <link rel="stylesheet" href="./hires.css">
+    <link rel="stylesheet" href="./hire.css">
   </head>
   <body>
     <header>

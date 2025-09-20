@@ -3,6 +3,7 @@
     max-width: 1200px;
     border-radius: 20px;
     padding: 20px 50px;
+    margin: 50px auto;
 }
 
 .pay h2, .pay .search{

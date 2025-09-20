@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $psword = password_hash($passwordRaw, PASSWORD_DEFAULT);
 
         // ✅ Check if email already exists
-        $check = $db->prepare("SELECT id FROM users WHERE email = :email LIMIT 1");
+        $check = $db->prepare("SELECT UserID FROM users WHERE email = :email LIMIT 1");
         $check->execute([':email' => $email]);
         if ($check->fetch()) {
             throw new Exception("Email already registered");
@@ -50,9 +50,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $db->prepare("INSERT INTO users (firstName, otherName, lastName, email, psword) 
                               VALUES (:firstName, :otherName, :lastName, :email, :psword)");
         $stmt->execute([
-            ':firstName' => htmlspecialchars($firstName),
-            ':otherName' => htmlspecialchars($otherName),
-            ':lastName'  => htmlspecialchars($lastName),
+            ':firstName' => $firstName,
+            ':otherName' => $otherName,
+            ':lastName'  => $lastName,
             ':email'     => $email,
             ':psword'    => $psword
         ]);
@@ -76,6 +76,8 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 <div class="container signup">
       <h2>Signup</h2>
       <form action="" method="post">
+          <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+
         <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
         <input type="text" id="otherName" name="otherName" placeholder="Other Name" required />
         <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
@@ -95,37 +97,6 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     require './footer.php';
 
     
-    // Set the hostname for MySQL (e.g., 'localhost' or an IP address)
-//     $hostname = "localhost";
 
-// // Set the database name
-//     $dbname = "vlpngco2_ccuser";
 
-// // Set the username and password with permissions to the database
-//     $username = "vlpngco2_ccuser";
-//     $password = "Aderinola05#";
-
-// // Create the DSN for MySQL
-//     $dsn = "mysql:host=$hostname;dbname=$dbname;charset=utf8mb4";
-
-// // Create a PDO object
-//     try {
-//         $db = new PDO($dsn, $username, $password);
-//         echo "Connection successful!";
-//         $firstName = $_POST['firstName'];
-//         $otherName = $_POST['otherName'];
-//         $lastName = $_POST['lastName'];
-//         $email = $_POST['email'];
-//         $psword = $_POST['password'];
-//         $newUserQuery = $db->prepare('INSERT INTO Users (firstName, otherName, lastName, email, psword) VALUES 
-//         (:firstName, :otherName, :lastName, :email, :psword)');
-//         $newUserQuery->execute(['firstName' => $firstName, 'otherName' => $otherName, 'lastName' => $lastName,
-//         'email' => $email, 'psword' => $psword]);
-
-//     } catch (PDOException $e) {
-//         echo "Connection failed: " . $e->getMessage();
-//     }
-
-// // Terminate db connection
-//     $db = null;
     ?>

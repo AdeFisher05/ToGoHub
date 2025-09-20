@@ -10,6 +10,7 @@ require './header.php';
     <div>
         <form action="" method="post">
             <div>
+            <div>
            <label for="name">Name 
             <input type="text" name="name" id="name" disabled>
            </label>
@@ -44,7 +45,7 @@ require './header.php';
            </label>
            </div>
            <div>
-           <label for="states">state
+           <label for="states">State
             <select name="state" id="state">
                 <option value="opt 1" selected disabled>Select one...</option>
                 <option value="opt 2">Abia</option>
@@ -134,7 +135,7 @@ require './header.php';
            </label>
            </div>
            <div>
-           <label for="m-o-p">Means of Paymet
+           <label for="m-o-p">Means of Payment
             <select name="m-o-p" id="m-o-p">
                 <option value="opt 1" selected disabled>Select one...</option>
                 <option value="opt 2">Wallet</option>
@@ -145,13 +146,14 @@ require './header.php';
            </div>
            <div>
            <label for="date">Date/Time
-            <input type="datetime-local" name="date" id="date">
+            <input type="text" name="date" id="date">
            </label>
            </div>
            <div>
            <label for="ref-id">Reference ID 
             <input type="text" name="ref-id" id="ref-id">
            </label>
+           </div>
            </div>
            <input type="submit" value="Submit Hire Request">
         </form>
