@@ -46,26 +46,34 @@ session_start();
               <a href="">Get Shop</a>
             </div>
           </li>
-          <li class="dropdown">
-            <button class="dropbtn">Account Settings ▾</button>
-            <div class="dropdown-content">
-              <a href="">My ID</a>
-              <a href="">Wallet Balance</a>
-              <a href="">Card Balance</a>
-              <a href="">Available Ticket</a>
-              <a href="">Manage</a>
-            </div>
-          </li>
+          <?php if (isset($_SESSION['user'])): ?>
+            <li class="dropdown">
+              <button class="dropbtn">Account Settings ▾</button>
+              <div class="dropdown-content">
+                <a href="">My ID: <span>#<?php echo htmlspecialchars($_SESSION['user']['UserID']); ?></span></a>
+                <a href="">Wallet Balance</a>
+                <a href="">Card Balance</a>
+                <a href="">Available Ticket</a>
+                <a href="">Manage</a>
+              </div>
+            </li>
+          <?php endif; ?>
+          <?php if (isset($_SESSION['user'])): ?>
+          <?php else: ?>  
           <li><a href="./signup">Create Account</a></li>
-          <li><a href="">Transaction History</a></li>
-          <?php if (isset($_SESSION['user_id'])): ?>
-            <li><a href="./">Sign Out</a></li>
+          <?php endif; ?>
+          <?php if (isset($_SESSION['user'])): ?>
+            <li><a href="">Transaction History</a></li>
+          <?php endif; ?>
+          <?php if (isset($_SESSION['user'])): ?>
+            <li><a href="./signout.php">Sign Out</a></li>
           <?php else: ?>
             <li><a href="./login">Sign In</a></li>
           <?php endif; ?>
-          <li><a href="">Alert</a></li>
-          <li><a href="">Notification</a></li>
-
+          <?php if (isset($_SESSION['user'])): ?>
+            <li><a href="">Alert</a></li>
+            <li><a href="">Notification</a></li>
+          <?php endif; ?>
 
         </ul>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">

@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 unset($_SESSION['pending_email']);
                 echo "<p style='color:green;'>Email verified successfully!</p>";
-                header("Location: /login");
+                header("Location: ./login");
             } elseif ($row['otp'] == $otp) {
                 echo "<p style='color:red;'>OTP expired. Please signup again.</p>";
             } else {

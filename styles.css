@@ -19,6 +19,7 @@
   padding: 10px;
 }
 
+
 @keyframes frame {
   0% {
     transform: rotateY(-20deg); /* Tilt backwards */
