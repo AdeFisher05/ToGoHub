@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
 
         // Redirect
-        header("Location: /dashboard");
+        header("Location: ./dashboard");
         exit;
 
     } catch (Exception $e) {
