@@ -35,6 +35,22 @@
   color: var(--panel);
 }
 
+.verify{
+  padding: 200px 20%;
+}
+
+.verify input{
+  width: 30%;
+}
+
+.verify button{
+  cursor: pointer;
+  background: var(--panel);
+  color: var(--brand);
+  padding: 12px 14px;
+  font: inherit;
+}
+
 @media (max-width: 640px){
     .signup{
         padding: 50px 10%;

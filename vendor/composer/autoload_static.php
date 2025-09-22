@@ -10,6 +10,7 @@ class ComposerStaticInit284bac05490e36a0f69724b8d2726efc
         'P' => 
         array (
             'Phroute\\Phroute\\' => 16,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
     );
 
@@ -17,6 +18,10 @@ class ComposerStaticInit284bac05490e36a0f69724b8d2726efc
         'Phroute\\Phroute\\' => 
         array (
             0 => __DIR__ . '/..' . '/phroute/phroute/src/Phroute',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
     );
 

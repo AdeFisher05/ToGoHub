@@ -12,14 +12,14 @@ if (empty($_SESSION['csrf_token'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
-        // ✅ CSRF check
+        // CSRF check
         if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
             throw new Exception("Invalid form submission");
         }
 
         // Collect inputs
         $emailOrUser = trim($_POST['email']);
-        $passwordRaw = trim($_POST['password']);  // ✅ added trim
+        $passwordRaw = trim($_POST['password']);  
 
         // DB connection
         $dsn = "mysql:host={$config['db']['host']};dbname={$config['db']['name']};charset={$config['db']['charset']}";
@@ -28,23 +28,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         ]);
 
-        // ✅ Fetch user
+        // Fetch user
         $stmt = $db->prepare("SELECT UserID, firstName, lastName, email, psword FROM users WHERE email = :email LIMIT 1");
         $stmt->execute([':email' => $emailOrUser]);
         $user = $stmt->fetch();
 
-        if (!$user) {
-            throw new Exception("No account found with that email");
-        }
+        
+           if ($user && password_verify($password, $user['psword'])) {
+               if ($user['is_verified'] == 1) {
+                // login success
+                echo 'Login successful';
+               } else {
+                echo "Please verify your email before logging in.";
+               }
+            }
 
-        // ✅ Verify password
-        if (!password_verify($passwordRaw, $user['psword'])) {
-            // Debugging hint (remove in production)
-            // echo "Entered: " . htmlspecialchars($passwordRaw) . "<br>Stored: " . htmlspecialchars($user['psword']);
-            throw new Exception("Incorrect password");
-        }
-
-        // ✅ Set session
+        // Set session
         $_SESSION['user'] = [
             'UserID'        => $user['UserID'],
             'firstName' => $user['firstName'],
@@ -53,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
 
         // Redirect
-        header("Location: home.php");
+        header("Location: /dashboard");
         exit;
 
     } catch (Exception $e) {
@@ -67,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <section class="container login">
     <h2>Login</h2>
     <form action="" method="post">
-        <!-- ✅ Include CSRF token -->
+        <!-- Include CSRF token -->
         <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
         
         <input type="email" name="email" id="email" placeholder="Email" required>

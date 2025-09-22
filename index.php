@@ -27,6 +27,10 @@ $router->any('/hires', function(){
      require './hires.php';
  });
 
+ $router->any('/dashboard', function(){
+     require './home.php';
+ });
+
 // Create dispatcher
 $dispatcher = new Dispatcher($router->getData());
 

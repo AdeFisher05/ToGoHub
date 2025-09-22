@@ -1,5 +1,11 @@
 <?php
+session_start();
 require './header.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
 ?>
 <div class="pay container">
 <h2>Pay for Ride</h2>

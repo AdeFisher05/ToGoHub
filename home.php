@@ -1,7 +1,11 @@
 <?php
+session_start();
 require './header.php';
 ?>
 <section class="Hero" id="hero">
+  <?php if (isset($_SESSION['user_id'])): ?>
+      <h2>Welcome, <?php echo htmlspecialchars($_SESSION['firstName']); ?>!</h2>
+      <?php endif; ?>
       <div class="heroContainer">
         <div class="frame">
           <img src="./images/Hero.jpg" alt="" />

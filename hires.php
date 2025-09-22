@@ -1,8 +1,15 @@
 <?php
+session_start();
 require './header.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
 ?>
 
 <div class="container hire">
+    
     <h2>Hire A Ride</h2>
     <p>Hire a ride now and have the driver pick you at your specified location.
         Fill the form below to make request and get response in a flash!
